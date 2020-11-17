@@ -19,15 +19,18 @@ class RestaurantsController < ApplicationController
   # Editer un restaurant s'il existe
   def edit
     @restaurant = Restaurant.find(params[:id])
-    # @restaurant.update(restaurant_params)
   end
   # mettre à jour les donnée d'un restaurant et le sauvegarder
   def update
-
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params)
+    redirect_to restaurants_path
   end
   # détruire un restaurant de la base de donée
   def destroy
-
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to restaurants_path
   end
   private
   def restaurant_params
