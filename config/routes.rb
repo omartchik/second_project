@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # lister les restaurants
-  resources :restaurants, only: [:index, :show,]
+  resources :restaurants
   # get "restaurants" => "restaurants#index"
   # # afficher un restaurant
   # get "restaurants/:id" => "restaurants#show"
